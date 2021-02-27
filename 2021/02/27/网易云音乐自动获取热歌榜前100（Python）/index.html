@@ -63,14 +63,18 @@
      
     <div class="article-meta">
       <a href="/2021/02/27/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%83%AD%E6%AD%8C%E6%A6%9C%E5%89%8D100%EF%BC%88Python%EF%BC%89/" class="article-date">
-  <time datetime="2021-02-27T13:58:29.000Z" itemprop="datePublished">2021-02-27</time>
-</a>   
+  <time datetime="2021-02-27T13:58:00.000Z" itemprop="datePublished">2021-02-27</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a>
+  </div>
+  
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">151</span>
+            <span class="post-count">184</span>
         </span>
     </span>
 
@@ -86,25 +90,13 @@
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="网易云音乐批量下载"><a href="#网易云音乐批量下载" class="headerlink" title="网易云音乐批量下载"></a>网易云音乐批量下载</h1><p>import requests<br>from bs4 import BeautifulSoup<br>header={    ‘User-Agent’:’Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36’,<br>    ‘Referer’:’<a target="_blank" rel="noopener" href="http://93.174.95.27&/#39;">http://93.174.95.27&#39;</a>,<br>}<br>link = “<a target="_blank" rel="noopener" href="http://music.163.com/discover/toplist?id=3778678&quot;">http://music.163.com/discover/toplist?id=3778678&quot;</a><br>r = requests.get(link, headers=header)<br>html = r.content<br>soup = BeautifulSoup(html, “html.parser”)<br>songs = soup.find(“ul”, class_=”f-hide”).select(“a”, limit=100)     </p>
-<p>i = 1 </p>
-<p>for s in songs:<br>    song_id = s[‘href’][9:]<br>    song_name = s.text<br>    song_down_link = “<a target="_blank" rel="noopener" href="http://music.163.com/song/media/outer/url?id=&quot;">http://music.163.com/song/media/outer/url?id=&quot;</a> + song_id + “.mp3”<br>    print(“第 “ + str(i) + “ 首歌曲：” + song_down_link)<br>    print(“正在下载…”)</p>
-<pre><code>response = requests.get(song_down_link, headers=header).content 
-f = open(song_name + &quot;.mp3&quot;, &#39;wb&#39;)   
-f.write(response)
-f.close()
-print(&quot;下载完成.\n\r&quot;)
-i = i + 1
-</code></pre>
- 
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 网易云音乐批量下载</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests					</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup		</span><br><span class="line">header=&#123;	<span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;Referer&#x27;</span>:<span class="string">&#x27;http://93.174.95.27&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">link = <span class="string">&quot;http://music.163.com/discover/toplist?id=3778678&quot;</span>	</span><br><span class="line">r = requests.get(link, headers=header)</span><br><span class="line">html = r.content	</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&quot;html.parser&quot;</span>)	</span><br><span class="line">songs = soup.find(<span class="string">&quot;ul&quot;</span>, class_=<span class="string">&quot;f-hide&quot;</span>).select(<span class="string">&quot;a&quot;</span>, limit=<span class="number">100</span>) 	</span><br><span class="line"></span><br><span class="line">i = <span class="number">1</span> </span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> s <span class="keyword">in</span> songs:  	</span><br><span class="line">    song_id = s[<span class="string">&#x27;href&#x27;</span>][<span class="number">9</span>:] 	</span><br><span class="line">    song_name = s.text 	</span><br><span class="line">    song_down_link = <span class="string">&quot;http://music.163.com/song/media/outer/url?id=&quot;</span> + song_id + <span class="string">&quot;.mp3&quot;</span>		</span><br><span class="line">    print(<span class="string">&quot;第 &quot;</span> + <span class="built_in">str</span>(i) + <span class="string">&quot; 首歌曲：&quot;</span> + song_down_link)</span><br><span class="line">    print(<span class="string">&quot;正在下载...&quot;</span>)</span><br><span class="line">    </span><br><span class="line">    response = requests.get(song_down_link, headers=header).content </span><br><span class="line">    f = <span class="built_in">open</span>(song_name + <span class="string">&quot;.mp3&quot;</span>, <span class="string">&#x27;wb&#x27;</span>)   </span><br><span class="line">    f.write(response)</span><br><span class="line">    f.close()</span><br><span class="line">    print(<span class="string">&quot;下载完成.\n\r&quot;</span>)</span><br><span class="line">    i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
@@ -161,6 +153,8 @@ i = i + 1
 </div>
 
 <div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
     </footer>
   </div>
 
