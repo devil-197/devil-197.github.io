@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-02-27T12:49:05.104Z</updated>
+  <updated>2021-02-27T14:14:48.621Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,73 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>arch安装VMware workstation</title>
+    <link href="http://example.com/2021/02/27/arch%E5%AE%89%E8%A3%85VMware-workstation/"/>
+    <id>http://example.com/2021/02/27/arch%E5%AE%89%E8%A3%85VMware-workstation/</id>
+    <published>2021-02-27T14:13:51.000Z</published>
+    <updated>2021-02-27T14:14:48.621Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>前期安装准备</li></ol><p>sudo pacman -S fuse2 gtkmm linux-headers pcsclite libcanberra</p><p>yay -S –noconfirm –needed ncurses5-compat-libs</p><ol start="2"><li>安装vmware</li></ol><p>yay -S –noconfirm –needed  vmware-workstation</p><ol start="3"><li>启动对应服务</li></ol><p>sudo systemctl enable vmware-networks.service  vmware-usbarbitrator.service vmware-hostd.service</p><p>sudo systemctl start vmware-networks.service  vmware-usbarbitrator.service vmware-hostd.service</p><pre><code>1]、用于访客网络访问的vmware-networks.service2]、vmware-usbarbitrator.service用于将USB设备连接到guest虚拟机3]、vmware-hostd.service用于共享虚拟机</code></pre><ol start="4"><li>最后加载vmware内核模块</li></ol><p>sudo modprobe -a vmw_vmci vmmon</p><p>或直接重启</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;前期安装准备&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;sudo pacman -S fuse2 gtkmm linux-headers pcsclite libcanberra&lt;/p&gt;
+&lt;p&gt;yay -S –noconfirm –needed ncurses5-compat</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>autoubuntu.sh（年久失修，仅供留念）</title>
+    <link href="http://example.com/2021/02/27/autoubuntu-sh%EF%BC%88%E5%B9%B4%E4%B9%85%E5%A4%B1%E4%BF%AE%EF%BC%8C%E4%BB%85%E4%BE%9B%E7%95%99%E5%BF%B5%EF%BC%89/"/>
+    <id>http://example.com/2021/02/27/autoubuntu-sh%EF%BC%88%E5%B9%B4%E4%B9%85%E5%A4%B1%E4%BF%AE%EF%BC%8C%E4%BB%85%E4%BE%9B%E7%95%99%E5%BF%B5%EF%BC%89/</id>
+    <published>2021-02-27T14:08:59.000Z</published>
+    <updated>2021-02-27T14:11:51.225Z</updated>
+    
+    <content type="html"><![CDATA[<p>#!/bin/bash</p><p>mkdir ./ubuntutemp</p><p>cd ./ubuntutemp</p><p>wget <a href="http://d1.music.126.net/dmusic/netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb">http://d1.music.126.net/dmusic/netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb</a></p><p>wget <a href="http://codown.youdao.com/cidian/linux/youdao-dict_6.0.0-ubuntu-amd64.deb">http://codown.youdao.com/cidian/linux/youdao-dict_6.0.0-ubuntu-amd64.deb</a></p><p>wget <a href="https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/9719/wps-office_11.1.0.9719_amd64.deb">https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/9719/wps-office_11.1.0.9719_amd64.deb</a></p><p>wget <a href="https://vscode.cdn.azure.cn/stable/d2e414d9e4239a252d1ab117bd7067f125afd80a/code_1.50.1-1602600906_amd64.deb">https://vscode.cdn.azure.cn/stable/d2e414d9e4239a252d1ab117bd7067f125afd80a/code_1.50.1-1602600906_amd64.deb</a></p><p>wget <a href="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb">https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im/deepin.com.qq.im_9.1.8deepin0_i386.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im/deepin.com.qq.im_9.1.8deepin0_i386.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/deepin.com.wechat_2.6.8.65deepin0_i386.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/deepin.com.wechat_2.6.8.65deepin0_i386.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.thunderspeed/deepin.com.thunderspeed_7.10.35.366deepin18_i386.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.thunderspeed/deepin.com.thunderspeed_7.10.35.366deepin18_i386.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine/deepin-wine_2.18-22~rc0_all.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine/deepin-wine_2.18-22~rc0_all.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine/deepin-wine32_2.18-22~rc0_i386.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine/deepin-wine32_2.18-22~rc0_i386.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine/deepin-wine32-preloader_2.18-22~rc0_i386.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine/deepin-wine32-preloader_2.18-22~rc0_i386.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine-helper/deepin-wine-helper_1.2deepin8_i386.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine-helper/deepin-wine-helper_1.2deepin8_i386.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine-plugin/deepin-wine-plugin_1.0deepin2_amd64.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine-plugin/deepin-wine-plugin_1.0deepin2_amd64.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine-plugin-virtual/deepin-wine-plugin-virtual_1.0deepin3_all.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine-plugin-virtual/deepin-wine-plugin-virtual_1.0deepin3_all.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine-uninstaller/deepin-wine-uninstaller_0.1deepin2_i386.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine-uninstaller/deepin-wine-uninstaller_0.1deepin2_i386.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/u/udis86/udis86_1.72-2_i386.deb">http://mirrors.aliyun.com/deepin/pool/non-free/u/udis86/udis86_1.72-2_i386.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine/deepin-fonts-wine_2.18-22~rc0_all.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine/deepin-fonts-wine_2.18-22~rc0_all.deb</a></p><p>wget <a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine/deepin-libwine_2.18-22~rc0_i386.deb">http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin-wine/deepin-libwine_2.18-22~rc0_i386.deb</a></p><p>wget <a href="https://mirrors.aliyun.com/deepin/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_1.5.1-2_amd64.deb">https://mirrors.aliyun.com/deepin/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_1.5.1-2_amd64.deb</a></p><p>wget <a href="https://mirrors.aliyun.com/deepin/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_1.5.1-2_i386.deb">https://mirrors.aliyun.com/deepin/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_1.5.1-2_i386.deb</a></p><p>echo ‘准备添加32位支持’</p><p>sudo dpkg –add-architecture i386</p><p>echo ‘添加成功，准备刷新apt缓存信息…’</p><p>sudo apt update</p><p>echo ‘即将开始安装…’</p><p>sudo dpkg -i *.deb</p><p>echo ‘安装完成，正在自动安装依赖…’</p><p>sudo apt install -fy</p><p>rm -vfr ./ubuntutemp</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;#!/bin/bash&lt;/p&gt;
+&lt;p&gt;mkdir ./ubuntutemp&lt;/p&gt;
+&lt;p&gt;cd ./ubuntutemp&lt;/p&gt;
+&lt;p&gt;wget &lt;a href=&quot;http://d1.music.126.net/dmusic/netease-cloud-music_1.2.</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>网易云音乐自动获取热歌榜前100（Python）</title>
+    <link href="http://example.com/2021/02/27/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%83%AD%E6%AD%8C%E6%A6%9C%E5%89%8D100%EF%BC%88Python%EF%BC%89/"/>
+    <id>http://example.com/2021/02/27/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%83%AD%E6%AD%8C%E6%A6%9C%E5%89%8D100%EF%BC%88Python%EF%BC%89/</id>
+    <published>2021-02-27T13:58:29.000Z</published>
+    <updated>2021-02-27T14:01:27.236Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="网易云音乐批量下载"><a href="#网易云音乐批量下载" class="headerlink" title="网易云音乐批量下载"></a>网易云音乐批量下载</h1><p>import requests<br>from bs4 import BeautifulSoup<br>header={    ‘User-Agent’:’Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36’,<br>    ‘Referer’:’<a href="http://93.174.95.27&/#39;">http://93.174.95.27&#39;</a>,<br>}<br>link = “<a href="http://music.163.com/discover/toplist?id=3778678&quot;">http://music.163.com/discover/toplist?id=3778678&quot;</a><br>r = requests.get(link, headers=header)<br>html = r.content<br>soup = BeautifulSoup(html, “html.parser”)<br>songs = soup.find(“ul”, class_=”f-hide”).select(“a”, limit=100)     </p><p>i = 1 </p><p>for s in songs:<br>    song_id = s[‘href’][9:]<br>    song_name = s.text<br>    song_down_link = “<a href="http://music.163.com/song/media/outer/url?id=&quot;">http://music.163.com/song/media/outer/url?id=&quot;</a> + song_id + “.mp3”<br>    print(“第 “ + str(i) + “ 首歌曲：” + song_down_link)<br>    print(“正在下载…”)</p><pre><code>response = requests.get(song_down_link, headers=header).content f = open(song_name + &quot;.mp3&quot;, &#39;wb&#39;)   f.write(response)f.close()print(&quot;下载完成.\n\r&quot;)i = i + 1</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;网易云音乐批量下载&quot;&gt;&lt;a href=&quot;#网易云音乐批量下载&quot; class=&quot;headerlink&quot; title=&quot;网易云音乐批量下载&quot;&gt;&lt;/a&gt;网易云音乐批量下载&lt;/h1&gt;&lt;p&gt;import requests&lt;br&gt;from bs4 import Beautif</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>我的Arch Linux</title>
