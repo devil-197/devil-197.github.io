@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-02-27T12:23:02.883Z</updated>
+  <updated>2021-02-27T12:49:05.104Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的Arch Linux</title>
+    <link href="http://example.com/2021/02/27/%E6%88%91%E7%9A%84Arch-Linux/"/>
+    <id>http://example.com/2021/02/27/%E6%88%91%E7%9A%84Arch-Linux/</id>
+    <published>2021-02-27T12:43:36.000Z</published>
+    <updated>2021-02-27T12:49:05.104Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是我的Archlinux，我的主要操作系统：<br><img src="/2021/02/27/%E6%88%91%E7%9A%84Arch-Linux/Screenshot_20210209_172151.png" alt="alt"></p><p><img src="/2021/02/27/%E6%88%91%E7%9A%84Arch-Linux/Screenshot_20210218_153604.png" alt="alt"></p><p><img src="/2021/02/27/%E6%88%91%E7%9A%84Arch-Linux/Screenshot_20210227_191702.png" alt="alt"></p><p>界面还可以哈~</p><p>至于我是怎么调教的，后面的文章会给出答案，敬请期待~</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这是我的Archlinux，我的主要操作系统：&lt;br&gt;&lt;img src=&quot;/2021/02/27/%E6%88%91%E7%9A%84Arch-Linux/Screenshot_20210209_172151.png&quot; alt=&quot;alt&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>滕王阁序</title>
